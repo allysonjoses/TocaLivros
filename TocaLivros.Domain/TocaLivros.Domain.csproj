@@ -35,9 +35,11 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Contracts\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IPedidoRepository.cs" />
+    <Compile Include="Contracts\IProdutoRepository.cs" />
+    <Compile Include="Contracts\IUsuarioRepository.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Usuario.cs" />
