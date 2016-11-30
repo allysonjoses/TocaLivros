@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.API", "TocaLivro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.Domain", "TocaLivros.Domain\TocaLivros.Domain.csproj", "{EE38DEB4-C8FF-41B7-8646-2205CCB678EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.Infraestructure", "TocaLivros.Infraestructure\TocaLivros.Infraestructure.csproj", "{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EE38DEB4-C8FF-41B7-8646-2205CCB678EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE38DEB4-C8FF-41B7-8646-2205CCB678EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE38DEB4-C8FF-41B7-8646-2205CCB678EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
