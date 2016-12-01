@@ -17,14 +17,14 @@ namespace TocaLivros.Domain.Contracts
         /// Realiza a busca por um produto
         /// </summary>
         /// <param name="id">Id do produto</param>
-        /// <returns>Objeto Produtos</returns>
+        /// <returns>Objeto Produto</returns>
         Task<Produto> GetAsync(int id);
 
         /// <summary>
         /// Cria um produto
         /// </summary>
         /// <param name="username">Nome do Usuario</param>
-        Task CreateAsync(string username);
+        Task CreateAsync(Produto produto);
 
         /// <summary>
         /// Atualiza um produto
