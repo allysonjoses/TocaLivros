@@ -2,7 +2,7 @@
 using TocaLivros.Domain.Contracts;
 using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
-using System;
+using System.Data.Entity;
 
 namespace TocaLivros.Infraestructure.EntityFramework.Repository
 {
@@ -15,19 +15,21 @@ namespace TocaLivros.Infraestructure.EntityFramework.Repository
             this._context = context;
         }
 
-        public Task CreateAsync(string username)
+        public async Task CreateAsync(string username)
         {
-            throw new NotImplementedException();
+            _context.Usuario.Add(new Usuario { UserName = username});
+            await _context.SaveChangesAsync();
         }
 
-        public Task<Usuario> GetAsync(string username)
+        public async Task<Usuario> GetAsync(string username)
         {
-            throw new NotImplementedException();
+            return await _context.Usuario.Include("Pedidos").
+                SingleOrDefaultAsync(x => x.UserName.Equals(username));
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();
         }
     }
 }

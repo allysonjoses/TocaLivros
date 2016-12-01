@@ -3,7 +3,7 @@ using TocaLivros.Domain.Contracts;
 using System.Collections.Generic;
 using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
-using System;
+using System.Data.Entity;
 
 namespace TocaLivros.Infraestructure.EntityFramework.Repository
 {
@@ -16,29 +16,32 @@ namespace TocaLivros.Infraestructure.EntityFramework.Repository
             this._context = context;
         }
 
-        public Task CreateAsync(Produto produto)
+        public async Task CreateAsync(Produto produto)
         {
-            throw new NotImplementedException();
+            _context.Produto.Add(produto);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<List<Produto>> GetAllAsync()
+        public async Task<List<Produto>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Produto.ToListAsync();
         }
 
-        public Task<Produto> GetAsync(int id)
+        public async Task<Produto> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Produto.FindAsync(id);
         }
 
-        public Task UpdateAsync(Produto produto)
+        public async Task UpdateAsync(Produto produto)
         {
-            throw new NotImplementedException();
+            _context.Produto.Attach(produto);
+            _context.Entry(produto).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();
         }
     }
 }
