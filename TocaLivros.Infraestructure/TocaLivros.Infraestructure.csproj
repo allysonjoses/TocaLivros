@@ -50,10 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\Context\AppDataContext.cs" />
+    <Compile Include="EntityFramework\Map\PedidoMap.cs" />
+    <Compile Include="EntityFramework\Map\ProdutoMap.cs" />
+    <Compile Include="EntityFramework\Map\UsuarioMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EntityFramework\Map\" />
     <Folder Include="EntityFramework\Repository\" />
     <Folder Include="IoC\" />
   </ItemGroup>
