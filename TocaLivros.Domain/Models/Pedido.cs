@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace TocaLivros.Domain.Models
 {
@@ -11,6 +12,9 @@ namespace TocaLivros.Domain.Models
 
         public int PedidoId { get; set; }
         public double Valor { get; set; }
+        public int UsuarioId { get; set; }
+        [JsonIgnore]
+        public virtual Usuario Usuario { get; set; }
         public virtual ICollection<Produto> Produtos { get; set; }
     }
 }
