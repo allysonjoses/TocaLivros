@@ -1,4 +1,5 @@
-﻿using TocaLivros.Domain.Contracts;
+﻿using TocaLivros.Infraestructure.EntityFramework.Context;
+using TocaLivros.Domain.Contracts;
 using System.Collections.Generic;
 using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
@@ -8,12 +9,14 @@ namespace TocaLivros.Infraestructure.EntityFramework.Repository
 {
     public class ProdutoRepository : IProdutoRepository
     {
-        public Task CreateAsync(Produto produto)
+        private readonly AppDataContext _context;
+
+        public ProdutoRepository(AppDataContext context)
         {
-            throw new NotImplementedException();
+            this._context = context;
         }
 
-        public void Dispose()
+        public Task CreateAsync(Produto produto)
         {
             throw new NotImplementedException();
         }
@@ -29,6 +32,11 @@ namespace TocaLivros.Infraestructure.EntityFramework.Repository
         }
 
         public Task UpdateAsync(Produto produto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
         {
             throw new NotImplementedException();
         }
