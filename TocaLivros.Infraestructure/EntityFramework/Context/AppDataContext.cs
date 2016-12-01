@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration.Conventions;
+using TocaLivros.Infraestructure.EntityFramework.Map;
 using TocaLivros.Domain.Models;
 using System.Data.Entity;
 
