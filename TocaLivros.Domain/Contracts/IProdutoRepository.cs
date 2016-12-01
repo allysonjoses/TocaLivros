@@ -23,7 +23,7 @@ namespace TocaLivros.Domain.Contracts
         /// <summary>
         /// Cria um produto
         /// </summary>
-        /// <param name="username">Nome do Usuario</param>
+        /// <param name="produto">Produto a ser criado</param>
         Task CreateAsync(Produto produto);
 
         /// <summary>
