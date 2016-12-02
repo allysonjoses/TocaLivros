@@ -12,7 +12,7 @@ namespace TocaLivros.API.Controllers
     [RoutePrefix("api/usuario")]
     public class UsuarioController : ApiController
     {
-        private IUsuarioRepository _DataBase;
+        private readonly IUsuarioRepository _DataBase;
 
         public UsuarioController(IUsuarioRepository DataBase)
         {
