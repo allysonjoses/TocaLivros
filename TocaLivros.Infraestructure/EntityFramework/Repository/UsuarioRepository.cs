@@ -3,6 +3,7 @@ using TocaLivros.Domain.Contracts;
 using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System;
 
 namespace TocaLivros.Infraestructure.EntityFramework.Repository
 {
@@ -17,14 +18,25 @@ namespace TocaLivros.Infraestructure.EntityFramework.Repository
 
         public async Task CreateAsync(string username)
         {
-            _context.Usuario.Add(new Usuario { UserName = username});
-            await _context.SaveChangesAsync();
+            var user = await _context.Usuario.SingleOrDefaultAsync(x => x.UserName.Equals(username));
+
+            if (user == null)
+            {
+                _context.Usuario.Add(new Usuario { UserName = username });
+                await _context.SaveChangesAsync();
+            }
+            else throw new Exception("Username já utilizado!");
         }
 
-        public async Task<Usuario> GetAsync(string username)
+        public async Task<Usuario> LoginAsync(string username)
+        {
+            return await _context.Usuario.SingleOrDefaultAsync(x => x.UserName.Equals(username));
+        }
+
+        public async Task<Usuario> GetAsync(int id)
         {
             return await _context.Usuario.Include("Pedidos").
-                SingleOrDefaultAsync(x => x.UserName.Equals(username));
+                FirstOrDefaultAsync(x => x.UsuarioId.Equals(id));
         }
 
         public void Dispose()

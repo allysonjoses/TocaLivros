@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 namespace TocaLivros.API.Security
 {
     public class AuthorizationServerProvider : OAuthAuthorizationServerProvider
@@ -16,8 +16,6 @@ namespace TocaLivros.API.Security
         {
             _service = service;
         }
-
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
@@ -30,7 +28,7 @@ namespace TocaLivros.API.Security
 
             try
             {
-                var user = await _service.GetAsync(context.UserName);
+                var user = await _service.LoginAsync(context.UserName);
 
                 if (user == null)
                 {
@@ -42,7 +40,7 @@ namespace TocaLivros.API.Security
 
                 identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.UsuarioId.ToString()));
 
-                GenericPrincipal principal = new GenericPrincipal(identity, null);
+                var principal = new GenericPrincipal(identity, null);
                 Thread.CurrentPrincipal = principal;
 
                 context.Validated(identity);
@@ -52,7 +50,6 @@ namespace TocaLivros.API.Security
                 context.SetError("Exception", ex.Message);
             }
         }
-
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
     }
 }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
