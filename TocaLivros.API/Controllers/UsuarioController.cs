@@ -1,4 +1,5 @@
 ﻿using TocaLivros.Domain.Contracts;
+using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
 using System.Security.Claims;
 using System.Web.Http;
@@ -46,13 +47,13 @@ namespace TocaLivros.API.Controllers
 
         [HttpPost]
         [Route("")]
-        public async Task<HttpResponseMessage> CreateAsync(string username)
+        public async Task<HttpResponseMessage> CreateAsync(Usuario usuario)
         {
             var response = new HttpResponseMessage();
 
             try
             {
-                await _DataBase.CreateAsync(username);
+                await _DataBase.CreateAsync(usuario.UserName);
                 response = Request.CreateResponse(HttpStatusCode.Created);
             }
             catch (Exception ex)
