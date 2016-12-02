@@ -58,7 +58,7 @@ namespace TocaLivros.API
 
         public void ConfigureOAuth(IAppBuilder app, IUsuarioRepository service)
         {
-            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/api/authentication"),

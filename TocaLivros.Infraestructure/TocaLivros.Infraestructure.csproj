@@ -73,9 +73,18 @@
     <Compile Include="EntityFramework\Repository\ProdutoRepository.cs" />
     <Compile Include="EntityFramework\Repository\UsuarioRepository.cs" />
     <Compile Include="IoC\DependencyResolver.cs" />
+    <Compile Include="Migrations\201612020643379_CriarBanco.cs" />
+    <Compile Include="Migrations\201612020643379_CriarBanco.Designer.cs">
+      <DependentUpon>201612020643379_CriarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612020643379_CriarBanco.resx">
+      <DependentUpon>201612020643379_CriarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
