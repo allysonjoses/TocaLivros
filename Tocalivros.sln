@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.Domain", "TocaLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.Infraestructure", "TocaLivros.Infraestructure\TocaLivros.Infraestructure.csproj", "{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Droid", "Droid", "{216A2FB1-CF42-4090-98CC-F2F7EBD13C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.Core", "TocaLivros.Core\TocaLivros.Core.csproj", "{E75C2B66-9137-4927-B660-263E99E875B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocaLivros.Droid", "TocaLivros.Droid\TocaLivros.Droid.csproj", "{648FBE35-E513-4480-B957-74CF04E2B293}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +33,22 @@ Global
 		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CCAC3CF-7F47-47E3-BC39-BDD764B62966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75C2B66-9137-4927-B660-263E99E875B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75C2B66-9137-4927-B660-263E99E875B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75C2B66-9137-4927-B660-263E99E875B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75C2B66-9137-4927-B660-263E99E875B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{648FBE35-E513-4480-B957-74CF04E2B293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{648FBE35-E513-4480-B957-74CF04E2B293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{648FBE35-E513-4480-B957-74CF04E2B293}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{648FBE35-E513-4480-B957-74CF04E2B293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{648FBE35-E513-4480-B957-74CF04E2B293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{648FBE35-E513-4480-B957-74CF04E2B293}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E75C2B66-9137-4927-B660-263E99E875B4} = {216A2FB1-CF42-4090-98CC-F2F7EBD13C93}
+		{648FBE35-E513-4480-B957-74CF04E2B293} = {216A2FB1-CF42-4090-98CC-F2F7EBD13C93}
 	EndGlobalSection
 EndGlobal
