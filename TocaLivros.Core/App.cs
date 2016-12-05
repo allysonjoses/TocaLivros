@@ -1,17 +1,22 @@
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
+using MvvmCross.Platform;
 
 namespace TocaLivros.Core
 {
-    public class App : MvvmCross.Core.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {
             CreatableTypes()
-                .EndingWith("Service")
+                .EndingWith("TocaLivros.Core.Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            Mvx.ConstructAndRegisterSingleton<IMvxAppStart, AppStart>();
+            var appStart = Mvx.Resolve<IMvxAppStart>();
+
+            RegisterAppStart(appStart);
         }
     }
 }

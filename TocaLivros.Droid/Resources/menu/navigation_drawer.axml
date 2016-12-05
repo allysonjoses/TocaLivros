@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:local="http://schemas.android.com/apk/res-auto">
+
+  <group android:id="@+id/nav_items">
+    <item
+        android:id="@+id/nav_minha_conta"
+        android:title="Minha Conta" />
+    <item
+          android:id="@+id/nav_produtos"
+          android:title="Produtos" />
+    <item
+          android:id="@+id/nav_carrinho"
+          android:title="Carrinho de Compras" />
+    <item
+          android:id="@+id/nav_pedidos"
+          android:title="Meus Pedidos" />
+  </group>
+
+  <group android:id="@+id/nav_footer">
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Sair" />
+  </group>
+</menu>

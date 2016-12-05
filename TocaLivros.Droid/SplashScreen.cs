@@ -5,17 +5,13 @@ using MvvmCross.Droid.Views;
 namespace TocaLivros.Droid
 {
     [Activity(
-        Label = "TocaLivros.Droid"
-        , MainLauncher = true
+          MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
-        public SplashScreen()
-            : base(Resource.Layout.SplashScreen)
-        {
-        }
+        public SplashScreen() : base(Resource.Layout.SplashScreen) { }
     }
 }
