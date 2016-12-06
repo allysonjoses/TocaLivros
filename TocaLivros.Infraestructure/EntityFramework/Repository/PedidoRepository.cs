@@ -1,8 +1,10 @@
 ﻿using TocaLivros.Infraestructure.EntityFramework.Context;
 using TocaLivros.Domain.Contracts;
+using System.Collections.Generic;
 using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Linq;
 using System;
 
 namespace TocaLivros.Infraestructure.EntityFramework.Repository
@@ -20,6 +22,11 @@ namespace TocaLivros.Infraestructure.EntityFramework.Repository
         {
             _context.Pedido.Add(pedido);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Pedido>> GetAllAsync(int id)
+        {
+            return await _context.Pedido.Where(x => x.UsuarioId.Equals(id)).ToListAsync();
         }
 
         public async Task<Pedido> GetAsync(int id)

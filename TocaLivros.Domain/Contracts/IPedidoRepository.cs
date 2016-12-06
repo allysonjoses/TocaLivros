@@ -1,4 +1,5 @@
-﻿using TocaLivros.Domain.Models;
+﻿using System.Collections.Generic;
+using TocaLivros.Domain.Models;
 using System.Threading.Tasks;
 using System;
 
@@ -6,6 +7,13 @@ namespace TocaLivros.Domain.Contracts
 {
     public interface IPedidoRepository : IDisposable
     {
+        /// <summary>
+        /// Retorna todos os pedidos do usuario
+        /// </summary>
+        /// <param name="id">Id do Usuario</param>
+        /// <returns>List<Pedido></Pedido></returns>
+        Task<List<Pedido>> GetAllAsync(int id);
+
         /// <summary>
         /// Realiza a busca por um pedido
         /// </summary>

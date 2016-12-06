@@ -1,8 +1,10 @@
 ﻿using TocaLivros.Domain.Contracts;
-using System.Web.Http;
-using System.Threading.Tasks;
-using System.Net.Http;
 using TocaLivros.Domain.Models;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Web.Http;
+using System.Net.Http;
+using System.Linq;
 using System.Net;
 using System;
 
@@ -16,6 +18,29 @@ namespace TocaLivros.API.Controllers
         public PedidoController(IPedidoRepository DataBase)
         {
             this._DataBase = DataBase;
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("")]
+        public async Task<HttpResponseMessage> GetAllAsync()
+        {
+            var response = new HttpResponseMessage();
+
+            try
+            {
+                var principal = Request.GetRequestContext().Principal as ClaimsPrincipal;
+                var identityClaim = principal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+
+                int UsuarioId = Convert.ToInt16(identityClaim.Value);
+                response = Request.CreateResponse(HttpStatusCode.OK, await _DataBase.GetAllAsync(UsuarioId));
+            }
+            catch (Exception ex)
+            {
+                response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+
+            return response;
         }
 
         [HttpGet]
