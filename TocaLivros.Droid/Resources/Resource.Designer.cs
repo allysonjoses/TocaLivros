@@ -2049,13 +2049,16 @@ namespace TocaLivros.Droid
 			public const int design_snackbar_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int Icon = 2130837581;
-			
-			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
+			public const int icon = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int splash = 2130837582;
+			public const int logo = 2130837582;
+			
+			// aapt resource value: 0x7f020050
+			public const int notification_template_icon_bg = 2130837584;
+			
+			// aapt resource value: 0x7f02004f
+			public const int splash = 2130837583;
 			
 			static Drawable()
 			{
@@ -2076,8 +2079,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06000c
 			public const int MvxBindingTagUnique = 2131099660;
 			
-			// aapt resource value: 0x7f06007f
-			public const int action0 = 2131099775;
+			// aapt resource value: 0x7f060080
+			public const int action0 = 2131099776;
 			
 			// aapt resource value: 0x7f06005c
 			public const int action_bar = 2131099740;
@@ -2103,8 +2106,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06005d
 			public const int action_context_bar = 2131099741;
 			
-			// aapt resource value: 0x7f060083
-			public const int action_divider = 2131099779;
+			// aapt resource value: 0x7f060084
+			public const int action_divider = 2131099780;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -2130,8 +2133,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060020
 			public const int always = 2131099680;
 			
-			// aapt resource value: 0x7f06008c
-			public const int appbar = 2131099788;
+			// aapt resource value: 0x7f06008d
+			public const int appbar = 2131099789;
 			
 			// aapt resource value: 0x7f06001d
 			public const int beginning = 2131099677;
@@ -2139,14 +2142,14 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06002c
 			public const int bottom = 2131099692;
 			
-			// aapt resource value: 0x7f060079
-			public const int btnLogin = 2131099769;
+			// aapt resource value: 0x7f06007a
+			public const int btnLogin = 2131099770;
 			
 			// aapt resource value: 0x7f060046
 			public const int buttonPanel = 2131099718;
 			
-			// aapt resource value: 0x7f060080
-			public const int cancel_action = 2131099776;
+			// aapt resource value: 0x7f060081
+			public const int cancel_action = 2131099777;
 			
 			// aapt resource value: 0x7f06002d
 			public const int center = 2131099693;
@@ -2160,8 +2163,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060054
 			public const int checkbox = 2131099732;
 			
-			// aapt resource value: 0x7f060086
-			public const int chronometer = 2131099782;
+			// aapt resource value: 0x7f060087
+			public const int chronometer = 2131099783;
 			
 			// aapt resource value: 0x7f060035
 			public const int clip_horizontal = 2131099701;
@@ -2175,8 +2178,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06004c
 			public const int contentPanel = 2131099724;
 			
-			// aapt resource value: 0x7f06007c
-			public const int content_frame = 2131099772;
+			// aapt resource value: 0x7f06007d
+			public const int content_frame = 2131099773;
 			
 			// aapt resource value: 0x7f060052
 			public const int custom = 2131099730;
@@ -2208,8 +2211,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060010
 			public const int disableHome = 2131099664;
 			
-			// aapt resource value: 0x7f06007b
-			public const int drawer_layout = 2131099771;
+			// aapt resource value: 0x7f06007c
+			public const int drawer_layout = 2131099772;
 			
 			// aapt resource value: 0x7f06005e
 			public const int edit_query = 2131099742;
@@ -2217,8 +2220,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06001e
 			public const int end = 2131099678;
 			
-			// aapt resource value: 0x7f06008b
-			public const int end_padder = 2131099787;
+			// aapt resource value: 0x7f06008c
+			public const int end_padder = 2131099788;
 			
 			// aapt resource value: 0x7f060025
 			public const int enterAlways = 2131099685;
@@ -2262,8 +2265,11 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060041
 			public const int image = 2131099713;
 			
-			// aapt resource value: 0x7f06008a
-			public const int info = 2131099786;
+			// aapt resource value: 0x7f060077
+			public const int imageView = 2131099767;
+			
+			// aapt resource value: 0x7f06008b
+			public const int info = 2131099787;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2271,11 +2277,11 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060031
 			public const int left = 2131099697;
 			
-			// aapt resource value: 0x7f060084
-			public const int line1 = 2131099780;
+			// aapt resource value: 0x7f060085
+			public const int line1 = 2131099781;
 			
-			// aapt resource value: 0x7f060088
-			public const int line3 = 2131099784;
+			// aapt resource value: 0x7f060089
+			public const int line3 = 2131099785;
 			
 			// aapt resource value: 0x7f06000d
 			public const int listMode = 2131099661;
@@ -2283,11 +2289,11 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060043
 			public const int list_item = 2131099715;
 			
-			// aapt resource value: 0x7f06007d
-			public const int main_frame = 2131099773;
+			// aapt resource value: 0x7f06007e
+			public const int main_frame = 2131099774;
 			
-			// aapt resource value: 0x7f060082
-			public const int media_actions = 2131099778;
+			// aapt resource value: 0x7f060083
+			public const int media_actions = 2131099779;
 			
 			// aapt resource value: 0x7f06001f
 			public const int middle = 2131099679;
@@ -2298,29 +2304,29 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060018
 			public const int multiply = 2131099672;
 			
-			// aapt resource value: 0x7f060091
-			public const int nav_carrinho = 2131099793;
-			
-			// aapt resource value: 0x7f060093
-			public const int nav_footer = 2131099795;
-			
-			// aapt resource value: 0x7f06008e
-			public const int nav_items = 2131099790;
+			// aapt resource value: 0x7f060092
+			public const int nav_carrinho = 2131099794;
 			
 			// aapt resource value: 0x7f060094
-			public const int nav_logout = 2131099796;
+			public const int nav_footer = 2131099796;
 			
 			// aapt resource value: 0x7f06008f
-			public const int nav_minha_conta = 2131099791;
+			public const int nav_items = 2131099791;
 			
-			// aapt resource value: 0x7f060092
-			public const int nav_pedidos = 2131099794;
+			// aapt resource value: 0x7f060095
+			public const int nav_logout = 2131099797;
 			
 			// aapt resource value: 0x7f060090
-			public const int nav_produtos = 2131099792;
+			public const int nav_minha_conta = 2131099792;
 			
-			// aapt resource value: 0x7f06007e
-			public const int navigation_frame = 2131099774;
+			// aapt resource value: 0x7f060093
+			public const int nav_pedidos = 2131099795;
+			
+			// aapt resource value: 0x7f060091
+			public const int nav_produtos = 2131099793;
+			
+			// aapt resource value: 0x7f06007f
+			public const int navigation_frame = 2131099775;
 			
 			// aapt resource value: 0x7f06006f
 			public const int navigation_header_container = 2131099759;
@@ -2346,8 +2352,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06002b
 			public const int pin = 2131099691;
 			
-			// aapt resource value: 0x7f06007a
-			public const int progressBar1 = 2131099770;
+			// aapt resource value: 0x7f06007b
+			public const int progressBar1 = 2131099771;
 			
 			// aapt resource value: 0x7f060006
 			public const int progress_circular = 2131099654;
@@ -2451,8 +2457,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060033
 			public const int start = 2131099699;
 			
-			// aapt resource value: 0x7f060081
-			public const int status_bar_latest_event_content = 2131099777;
+			// aapt resource value: 0x7f060082
+			public const int status_bar_latest_event_content = 2131099778;
 			
 			// aapt resource value: 0x7f060067
 			public const int submit_area = 2131099751;
@@ -2460,11 +2466,11 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06000f
 			public const int tabMode = 2131099663;
 			
-			// aapt resource value: 0x7f060089
-			public const int text = 2131099785;
+			// aapt resource value: 0x7f06008a
+			public const int text = 2131099786;
 			
-			// aapt resource value: 0x7f060087
-			public const int text2 = 2131099783;
+			// aapt resource value: 0x7f060088
+			public const int text2 = 2131099784;
 			
 			// aapt resource value: 0x7f06004f
 			public const int textSpacerNoButtons = 2131099727;
@@ -2475,8 +2481,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f060076
 			public const int text_view_fullname = 2131099766;
 			
-			// aapt resource value: 0x7f060085
-			public const int time = 2131099781;
+			// aapt resource value: 0x7f060086
+			public const int time = 2131099782;
 			
 			// aapt resource value: 0x7f060045
 			public const int title = 2131099717;
@@ -2484,8 +2490,8 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06004a
 			public const int title_template = 2131099722;
 			
-			// aapt resource value: 0x7f06008d
-			public const int toolbar_main = 2131099789;
+			// aapt resource value: 0x7f06008e
+			public const int toolbar_main = 2131099790;
 			
 			// aapt resource value: 0x7f060034
 			public const int top = 2131099700;
@@ -2496,11 +2502,11 @@ namespace TocaLivros.Droid
 			// aapt resource value: 0x7f06006b
 			public const int touch_outside = 2131099755;
 			
-			// aapt resource value: 0x7f060077
-			public const int txtInputLayoutPassword = 2131099767;
-			
 			// aapt resource value: 0x7f060078
-			public const int txtPassword = 2131099768;
+			public const int txtInputLayoutPassword = 2131099768;
+			
+			// aapt resource value: 0x7f060079
+			public const int txtPassword = 2131099769;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;

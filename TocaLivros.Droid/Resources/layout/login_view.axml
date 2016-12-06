@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+<android.support.design.widget.CoordinatorLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:overScrollMode="ifContentScrolls"
+  android:fitsSystemWindows="true">
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/element_margin_large"
-        android:layout_gravity="top">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/element_margin_medium"
+    android:layout_gravity="top">
+      <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:color="@color/white"
-            android:layout_marginTop="@dimen/element_margin_huge">
+            android:layout_marginTop="@dimen/element_margin_large">
             <TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,4 +71,4 @@
             android:layout_marginTop="@dimen/element_margin_large"
             android:layout_marginBottom="@dimen/element_margin_large" />
     </LinearLayout>
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

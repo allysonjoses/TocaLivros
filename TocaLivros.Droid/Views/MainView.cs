@@ -33,6 +33,12 @@ namespace TocaLivros.Droid.Views
                 ViewModel.ShowApp();
         }
 
+       
+        public void SetTitle(string title)
+        {
+            Title = title;
+        }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -45,9 +51,22 @@ namespace TocaLivros.Droid.Views
             return base.OnOptionsItemSelected(item);
         }
 
-        public void SetTitle(string title)
+        private void ShowBackButton()
         {
-            Title = title;
+            //TODO Tell the toggle to set the indicator off
+            //this.DrawerToggle.DrawerIndicatorEnabled = false;
+
+            //Block the menu slide gesture
+            DrawerLayout.SetDrawerLockMode(DrawerLayout.LockModeLockedClosed);
+        }
+
+        private void ShowHamburguerMenu()
+        {
+            //TODO set toggle indicator as enabled 
+            //this.DrawerToggle.DrawerIndicatorEnabled = true;
+
+            //Unlock the menu sliding gesture
+            DrawerLayout.SetDrawerLockMode(DrawerLayout.LockModeUnlocked);
         }
 
         public override void OnBackPressed()
@@ -58,21 +77,14 @@ namespace TocaLivros.Droid.Views
                 base.OnBackPressed();
         }
 
-        public void ShowSoftKeyboard()
-        {
-            if (CurrentFocus == null) return;
-
-            var inputMethodManager = (InputMethodManager)GetSystemService(InputMethodService);
-            inputMethodManager.ToggleSoftInput(ShowFlags.Forced, HideSoftInputFlags.NotAlways);
-        }
-
         public void HideSoftKeyboard()
         {
             if (CurrentFocus == null) return;
 
-            var inputMethodManager = (InputMethodManager)GetSystemService(InputMethodService);
-            inputMethodManager.ToggleSoftInput(ShowFlags.Implicit, HideSoftInputFlags.None);
-            inputMethodManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, HideSoftInputFlags.None);
+            InputMethodManager inputMethodManager = (InputMethodManager)GetSystemService(InputMethodService);
+            inputMethodManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, 0);
+
+            CurrentFocus.ClearFocus();
         }
     }
 }
