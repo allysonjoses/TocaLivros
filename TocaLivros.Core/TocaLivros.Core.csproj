@@ -40,7 +40,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Implementation\Api.cs" />
     <Compile Include="Service\Implementation\BaseApi.cs" />
+    <Compile Include="Service\Implementation\PedidoService.cs" />
+    <Compile Include="Service\Implementation\ProdutoService.cs" />
+    <Compile Include="Service\Implementation\UsuarioService.cs" />
     <Compile Include="Service\Interfaces\IApi.cs" />
+    <Compile Include="Service\Interfaces\IPedidoService.cs" />
+    <Compile Include="Service\Interfaces\IProdutoService.cs" />
+    <Compile Include="Service\Interfaces\IUsuarioService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
